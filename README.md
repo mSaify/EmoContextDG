@@ -1,11 +1,5 @@
-# EmpDG: Multi-resolution Interactive Empathetic Dialogue Generation (COLING 2020)
-<img src="plot/pytorch-logo-dark.png" width="10%"> [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+# EmpDG: Multiresolution Dialog Generation with semantic focus
 
-This repository is the implementation of our COLING 2020 Paper [EmpDG: Multi-resolution Interactive Empathetic Dialogue Generation](http://128.84.4.27/pdf/1911.08698).
-
-## Model Architecture
-
-![Image of EmpDG](fig/empdg.jpg)
 
 ## Setup
 - Check the packages needed or simply run the command:
@@ -39,7 +33,7 @@ python3 adver_train.py --cuda --label_smoothing --noam --emb_dim 300 --rnn_hidde
 EmpDG_woD
 ```bash
 # Empathetic Generator
-python train.py --cuda --label_smoothing --noam --emb_dim 300 --hidden_dim 300 --hop 1 --heads 2 --pretrain_emb --model EmpDG_woD --device_id 0 --save_path save/EmpDG_woD/ --pointer_gen
+python train_generator.py --cuda --label_smoothing --noam --emb_dim 300 --hidden_dim 300 --hop 1 --heads 2 --pretrain_emb --model EmpDG_woD --device_id 0 --save_path save/EmpDG_woD/ --pointer_gen
 ```
 EmpDG_woG
 ```bash
@@ -69,17 +63,17 @@ python3 interact.py --model EmpDG --cuda --label_smoothing --noam --emb_dim 300 
 |Role | Response |
 |---------|--------|
 |User | i am so excited because i am finally going to visit my old friend ! |
-|EmpDG | that is awesome ! what kind of visit ? |
+|EmpSem | that is awesome ! what kind of visit ? |
 |User | we will enjoy chatting and playing . |
-|EmpDG | that is a lot of nostalgia . |
+|EmpSem | that is a lot of nostalgia . |
 
 
 |Role | Response |
 |---------|--------|
 |User | i argued with my brother . |
-|EmpDG | oh no ! what happened ? |
+|EmpSem | oh no ! what happened ? |
 |User | i don't want to recall . |
-|EmpDG | i am sorry , that is not a good thing .  |
+|EmpSem | i am sorry , that is not a good thing .  |
 
 ## Reference & Acknowledgements
 If you find our work useful, please cite our paper as follows:
@@ -93,16 +87,3 @@ If you find our work useful, please cite our paper as follows:
   year={2020}
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-

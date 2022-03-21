@@ -1,5 +1,5 @@
 import time
-from train import *
+from train_generator import *
 from tensorboardX import SummaryWriter
 import utils.config as config
 from Model.EmpC_Gen import Empdg_G
@@ -338,7 +338,7 @@ if __name__ == '__main__':
     config.emb_file='vectors/glove.6B.300d.txt'
     config.test=False
     config.approach1=False
-    config.resume_d=False
+    config.resume_d=True
     config.resume_g=True
 
 

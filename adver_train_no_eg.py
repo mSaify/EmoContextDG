@@ -8,7 +8,7 @@ from torch.nn.init import xavier_uniform_
 
 from utils.data_loader import prepare_data_seq
 from utils.common import *
-from train import *
+from train_generator import *
 from tensorboardX import SummaryWriter
 import utils.config as config
 
