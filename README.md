@@ -1,3 +1,7 @@
+
+This is extensions work of https://github.com/qtli/EmpDG combining GAN and MIME approach for mimicking postive and negative emotions. The overall change is only in the encoder layer which used mimicking along with semantic embeddings.
+
+
 # EmpDG: Multiresolution Dialog Generation with semantic focus
 
 
@@ -75,15 +79,5 @@ python3 interact.py --model EmpDG --cuda --label_smoothing --noam --emb_dim 300 
 |User | i don't want to recall . |
 |EmpSem | i am sorry , that is not a good thing .  |
 
-## Reference & Acknowledgements
-If you find our work useful, please cite our paper as follows:
 
-```bibtex
-@inproceedings{li2020empdg,
-  title={EmpDG: Multi-resolution Interactive Empathetic Dialogue Generation},
-  author={Li, Qintong and Chen, Hongshen and Ren, Zhaochun and Ren, Pengjie and Tu, Zhaopeng and Chen, Zhumin},
-  booktitle={Proceedings of the 28th International Conference on Computational Linguistics},
-  pages={4454--4466},
-  year={2020}
-}
 ```
